@@ -7,12 +7,12 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-
-  gap: 2rem;
 }
 
 .App .card-wrapper {
   height: 80%;
+  max-width: calc(100% - 2rem);
+  padding: 1rem;
   aspect-ratio: 2.5/3.5;
   width: fit-content;
   display: grid;
@@ -28,4 +28,5 @@
   padding: 1rem;
   border-radius: 10px;
   border: 1px solid var(--accentColor);
+  justify-self: flex-end;
 }

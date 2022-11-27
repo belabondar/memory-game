@@ -101,6 +101,7 @@ function App({ length }: IApp) {
       <div className="card-wrapper">
         {deck.map((value, index) => (
           <MemoryCard
+            key={index}
             item={value}
             active={active[index]}
             onclick={() => onclick(index)}
