@@ -1,0 +1,50 @@
+.card {
+  aspect-ratio: 2.5/3.5;
+
+  background-color: transparent;
+  position: relative;
+  transition: transform 500ms ease-in-out;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transform-style: preserve-3d;
+
+  border: 2px solid var(--accentColor, gold);
+  border-radius: 10px;
+
+}
+
+.card.active {
+  transform: rotateY(0.5turn);
+}
+
+.card .front, .card .back {
+  border-radius: inherit;
+  color: var(--accentColor, gold);
+  position: absolute;
+  inset: 0;
+}
+
+.front {
+  background-image: url("../../assets/pattern.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  backface-visibility: visible;
+}
+
+.back {
+  transform: rotateY(0.5turn);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backface-visibility: hidden;
+}
+
+.card p {
+  user-select: none;
+  font-size: 5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
